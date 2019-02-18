@@ -1,29 +1,44 @@
+<script>
+import AppHeader from '@/components/common/header/AppHeader.vue'
+import AppFooter from '@/components/common/footer/AppFooter.vue'
+
+export default {
+  name: 'App-Main',
+  components: {
+    AppHeader,
+    AppFooter
+  },
+  created () {
+    this.$store.dispatch('updateShowList')
+  }
+}
+</script>
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div class="container" id="app">
+    <AppHeader />
+    <main class="container-content" role="main">
+      <router-view/>
+    </main>
+    <AppFooter />
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+@import './assets/css/_base/_normalize';
+@import './assets/css/_base/_base';
+@import './assets/css/_utilities/_functions.scss';
+@import './assets/css/_utilities/_mixins.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &-content {
+    @include flexContainer(flex, column, nowrap, flex-start, flex-start, flex-start);
+    flex: 1 0 auto;
+    padding: pxToRem(6) pxToRem(30) pxToRem(6) pxToRem(30);
+    width: 100%;
   }
 }
 </style>

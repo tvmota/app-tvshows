@@ -15,5 +15,13 @@ export async function searchQueryShow (query) {
 
 export async function searchShow (id) {
   let resp = (await Api.get(`/shows/${id}`)).data
+
+  if (resp.genres.length < 1) {
+    resp.genres = '-'
+  } else {
+    resp.genres = resp.genres.join(', ')
+  }
+
+  resp.summary = resp.summary.replace(/<[^>]*>/g, '')
   return resp
 }

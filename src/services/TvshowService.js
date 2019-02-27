@@ -14,6 +14,6 @@ export async function searchQueryShow (query) {
 }
 
 export async function searchShow (id) {
-  let resp = (await Api.get(`/shows/${id}`)).data
+  let resp = (await Api.get(`shows/${id}`)).data
   return resp
 }

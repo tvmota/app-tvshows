@@ -1,34 +1,13 @@
 # app-tvshows
 
-## Project setup
-```
-npm install
-```
+## Instruções para execução
 
-### Compiles and hot-reloads for development
-```
+fazer o clone do projeto [App-Tvshows](https://github.com/tvmota/app-tvshows) 
+
+```bash
+cd /code-chalenge
+npm i
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Acessar [http://localhost:8080](http:localhost:8080) :D

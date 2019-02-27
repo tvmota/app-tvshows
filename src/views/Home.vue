@@ -36,7 +36,7 @@ export default {
       })
     },
     selectedHandler (item) {
-      this.selectedShow = item.item
+      this.$router.push({ path: `/details/${item.item.id}` })
     },
     navigateDetail (id) {
       this.$router.push({ path: `/details/${id}` })

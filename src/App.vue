@@ -38,6 +38,7 @@ export default {
     @include flexContainer(flex, column, nowrap, flex-start, flex-start, flex-start);
     flex: 1 0 auto;
     padding: pxToRem(6) pxToRem(30) pxToRem(6) pxToRem(30);
+    overflow-y: auto;
     width: 100%;
   }
 }

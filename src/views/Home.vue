@@ -76,7 +76,7 @@ export default {
 
 .autocomplete-wrap {
   width: 100%;
-  margin-bottom: pxToRem(50);
+  margin-bottom: pxToRem(35);
 
   #searchShowInput {
     background-color: $color-white;
